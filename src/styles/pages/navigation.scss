@@ -1,0 +1,85 @@
+.navigation {
+    @extend %cover;
+    position: fixed;
+    pointer-events: none;
+    z-index: z('navigation');
+   }
+   .navigation__link{
+       font-size: 0;
+       position: absolute;
+       left:4rem;
+       pointer-events: auto;
+       top: 4rem;
+       transition: opacity 0.4s ease;
+       width: 12.8rem;
+       height: 2rem;
+   
+       &:hover {
+           opacity: 0.5;
+       }
+   
+       @include media('<=phone') {
+           left: 5rem;
+           top: 5rem;
+           width: 27.9rem;
+           height: 4.3rem;
+       }
+   }
+   .navigation__list__item {
+       position: absolute;
+       pointer-events: auto;
+
+       &:first-child {
+        left: 4rem;
+        top: 4rem;
+       }
+
+       &:nth-child(2) {
+        right: 4rem;
+        top: 4rem;
+       }
+       
+       &:nth-child(3) {
+        left: 4rem;
+        bottom: 4rem;
+       }
+
+       &:nth-child(4) {
+        right: 4rem;
+        bottom: 4rem;
+       }
+    }
+   
+   .navigation__list__link {
+        @extend %title-20;
+        display: block;
+        line-height: 1;
+    }
+    .navigation__spinner__wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .navigation__spinner {
+        position: absolute;
+        animation: animate 15s linear infinite;
+        
+        @keyframes animate {
+            0%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+            
+        }
+        span {
+            display: inline-block;
+            position:absolute;
+            top: -15rem;
+            transform-origin: 0 15rem;
+        }
+    }
+ 

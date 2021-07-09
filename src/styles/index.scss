@@ -1,0 +1,24 @@
+@import './base/reset';
+@import './utils/variables';
+@import './utils/functions';
+@import './utils/mixins';
+@import './utils/vendors';
+@import './utils/responsive';
+
+@import './shared/titles';
+@import './shared/project';
+@import './shared/description';
+@import './shared/links';
+
+@import './base/fonts';
+@import './base/base';
+
+
+@import './pages/home';
+@import './pages/navigation';
+@import './pages/loudMusic';
+@import './pages/KarpovKorchnoi';
+@import './pages/nearearthobjects';
+
+
+
