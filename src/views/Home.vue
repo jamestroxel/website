@@ -3,8 +3,8 @@
    <div class="home__wrapper">
      <section class="home__media__wrapper">
        <div class="home__media">
-         <transition v-if="showImg" name="fadeIn">
-           <img :src="imgUrl" class="home__media__image" alt=""/>
+         <transition  v-if="showImg" name="fadeIn">
+           <img v-if="loaded" :src="imgUrl" class="home__media__image" alt=""/>
           <!-- <img v-if="image" :src="image" class="home__media__image" alt=""/> -->
          </transition>
        </div>
@@ -22,6 +22,9 @@
 
 <script>
 import { gsap } from 'gsap'
+import decade from '../assets/bottom.png'
+// import kvk from '../assets/KvK_VI-05.png'
+// import asteroids from '../assets/nasa-jpl-neo-1.png'
 // import each from 'lodash/each'
 export default {
   name: 'Home',
@@ -30,8 +33,9 @@ export default {
      imageState:"",
      image:"",
      alt:"",
-     showImg: false,
-     imgUrl: ""
+     showImg: true,
+     imgUrl: "",
+     loaded: false
     };
   },
   created() {
@@ -42,12 +46,12 @@ export default {
   mounted() {
     this.img = new Image();
 
-    this.img.onload = () => {
+    this.img.onload = (i) => {
       console.log('img loaded');
-      this.imgUrl = this.img.src;
-      this.showImg = true;
+      this.imgUrl = this.img.src[i];
+      this.showImg = true
     }
-    this.img.src = ['../assets/bottom.png', '../assets/KvK_VI-05.png', '../assets/nasa-jpl-neo-1.png'];
+    this.img.src = decade;
   
     // this.ref = this.$refs.title
     // this.elements = document.querySelectorAll('.home__project__title span')
@@ -86,20 +90,21 @@ export default {
   },
   methods: {
     titleOver(event) {
-      console.log(event.path[0].innerHTML)
+      console.log(this.img.src)
       if (event.path[0].innerHTML == "A Decade of Loud Music") {
-        this.imgUrl = this.img.src[0]
+        this.imgUrl = this.img.src
         this.alt = event.path[0].innerHTML
       }
       if (event.path[0].innerHTML == "Karpov vs. Korchnoi") {
-        this.imgUrl = this.img.src[1]
+        this.imgUrl = this.img.src
         this.alt = event.path[0].innerHTML
       }
       if (event.path[0].innerHTML == "Near Earth Objects") {
-         this.imgUrl = this.img.src[2]
+         this.imgUrl = this.img.src
         this.alt = event.path[0].innerHTML
       }
       console.log(this.image)
+      this.loaded = true;
       // this.fade.play();
     },
     titleOut() {
@@ -110,6 +115,7 @@ export default {
       //   ease: "back"
       // }).reverse();
       this.image = ""
+      this.loaded = false;
       // this.fade.reverse();
     },
     // getUrl(){
