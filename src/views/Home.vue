@@ -3,7 +3,7 @@
    <div class="home__wrapper">
      <section class="home__media__wrapper">
        <div class="home__media">
-         <transition  v-if="showImg" name="fadeIn">
+         <transition  name="fadeIn">
            <img v-if="loaded" :src="imgUrl" class="home__media__image" alt=""/>
           <!-- <img v-if="image" :src="image" class="home__media__image" alt=""/> -->
          </transition>
@@ -23,19 +23,19 @@
 <script>
 import { gsap } from 'gsap'
 import decade from '../assets/bottom.png'
-// import kvk from '../assets/KvK_VI-05.png'
-// import asteroids from '../assets/nasa-jpl-neo-1.png'
+import kvk from '../assets/KvK_VI-05.png'
+import asteroids from '../assets/nasa-jpl-neo-1.png'
 // import each from 'lodash/each'
 export default {
   name: 'Home',
   data() {
     return {
-     imageState:"",
      image:"",
      alt:"",
      showImg: true,
      imgUrl: "",
-     loaded: false
+     loaded: false,
+     images: [decade, kvk, asteroids]
     };
   },
   created() {
@@ -46,12 +46,13 @@ export default {
   mounted() {
     this.img = new Image();
 
-    this.img.onload = (i) => {
+    this.img.onload = () => {
       console.log('img loaded');
-      this.imgUrl = this.img.src[i];
+      console.log( this.imgUrl);
+      this.imgUrl = this.img.src;
       this.showImg = true
     }
-    this.img.src = decade;
+    this.img.src = this.images;
   
     // this.ref = this.$refs.title
     // this.elements = document.querySelectorAll('.home__project__title span')
@@ -92,15 +93,15 @@ export default {
     titleOver(event) {
       console.log(this.img.src)
       if (event.path[0].innerHTML == "A Decade of Loud Music") {
-        this.imgUrl = this.img.src
+        this.img.src = this.images[0]
         this.alt = event.path[0].innerHTML
       }
       if (event.path[0].innerHTML == "Karpov vs. Korchnoi") {
-        this.imgUrl = this.img.src
+        this.img.src = this.images[1]
         this.alt = event.path[0].innerHTML
       }
       if (event.path[0].innerHTML == "Near Earth Objects") {
-         this.imgUrl = this.img.src
+         this.img.src = this.images[2]
         this.alt = event.path[0].innerHTML
       }
       console.log(this.image)
