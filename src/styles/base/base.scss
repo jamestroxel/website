@@ -54,10 +54,10 @@ img {
         vertical-align: top;
     }
 }
-.fade-enter-active, .fade-leave-active {
+.fadeIn-enter-active, .fadeIn-leave-active {
     transition: opacity .5s ease;
   }
   
-  .fade-enter-from, .fade-leave-to {
+  .fadeIn-enter-from, .fadeIn-leave-to {
     opacity: 0;
   }

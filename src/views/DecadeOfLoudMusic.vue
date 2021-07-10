@@ -45,21 +45,24 @@
           />
         </figure>
         <p class="project__text">
-          The data was gathered from roughly 25 million 311 call records stored
-          in NYC Open Data's Socrata database. The majority of the work was done
-          in the query itself by stringing together a series of SoQL clauses to
-          extract the complaint type, and then count and group by month and&nbsp;year.
+          Given the lighter subject matter, I took this as an opportunity to celebrate the formal quality of the data when plotted in such a way. The result is a zine-like graphic treatment of the content and layout. 
         </p>
         <figure class="project__hero">
           <div class="project__hero__ui">&bull; &bull; &bull;</div>
           <img class="project__hero__image" src="../assets/tooltip.png" />
         </figure>
         <p class="project__text">
+          The data was gathered from roughly 25 million 311 call records stored
+          in NYC Open Data's Socrata database. The majority of the work was done
+          in the query itself by stringing together a series of SoQL clauses to
+          extract the complaint type, and then count and group by month and&nbsp;year.
+        </p>
+        <!-- <p class="project__text">
           $select=date_extract_y(created_date) as year,<br>
           date_extract_m(created_date) as month,<br>
           descriptor='Loud Music/Party',<br>
           count(*)&$group=year, month,<br>
-          descriptor='Loud Music/Party</p>
+          descriptor='Loud Music/Party</p> -->
       </section>
     </div>
   </div>

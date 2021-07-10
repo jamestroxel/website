@@ -3,11 +3,11 @@
     <div class="project__wrapper">
         <div class="project__title__wrapper">
                 <h1 class="loudMusic__project__title">James Troxel</h1>
-        <p class="project__feature__text__title">Email <span class="project__feature__tool">james.r.troxel@gmail.com</span></p>
+        <p class="project__feature__text__title">Email: james.r.troxel@gmail.com</p>
             <div class='project__launch__wrapper'>
             <a
             class="project__launch__back"
-            >Launch Project</a
+            >Contact</a
             >
             <a
             @mouseover="buttonOver"
@@ -15,9 +15,8 @@
             @mousedown="buttonDown"
             @mouseup="buttonUp"
             class="project__launch__front"
-            href="https://jamestroxel.github.io/decade-of-loud-music/"
-            target="_blank"
-            >Launch Project</a
+            href="mailto:james.r.troxel.com"
+            >Contact</a
             >
             </div>
             <div class="features__wrapper">
@@ -31,12 +30,16 @@
                 <p class="project__title__view">James Troxel is an experienced, full-stack designer with a specialization in data visualization and an impulse to tell a story.</p>
             </div>
             <figure id="teaserTrigger" class="project__hero">
-          <div class="project__hero__ui">&bull; &bull; &bull;</div>
-          <img
-            class="project__hero__image"
-            src="../assets/nasa-jpl-neo-1.png"
-          />
-        </figure>
+                <div class="project__hero__ui">&bull; &bull; &bull;</div>
+                <img
+                    class="project__hero__image"
+                    src="../assets/GettyImages-535003872.jpg"
+                />
+            </figure>
+            <p  class="project__text">
+            James has established a career filling many roles within the field of communication arts, whether it be print-making, presentation design, art direction or data visualization.</p>
+            <p class="project__text">
+            He studied painting at The School of Visual Arts, earning his BFA there in 2009 and earned a Master of Science degree in Data Visualization from Parsons School of Design in 2021.</p>
         </section>
     </div>
   </div>

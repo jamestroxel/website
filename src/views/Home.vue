@@ -3,31 +3,35 @@
    <div class="home__wrapper">
      <section class="home__media__wrapper">
        <div class="home__media">
-         <transition name="fade">
-          <img v-if="image" :src="image" class="home__media__image" alt=""/>
+         <transition v-if="showImg" name="fadeIn">
+           <img :src="imgUrl" class="home__media__image" alt=""/>
+          <!-- <img v-if="image" :src="image" class="home__media__image" alt=""/> -->
          </transition>
        </div>
      </section>
-     <section class="home__project">
-      
+    
+      <section class="home__project">
           <router-link @mouseover="titleOver($event)" @mouseout="titleOut" ref="title" to="/decade-of-loud-music" class="home__project__title">A Decade of Loud Music</router-link><br>
           <router-link @mouseover="titleOver($event)" @mouseout="titleOut" ref="title" to="/karpov-korchnoi" class="home__project__title">Karpov vs. Korchnoi</router-link><br>
           <router-link @mouseover="titleOver($event)" @mouseout="titleOut" ref="title" to="/near-earth-objects" class="home__project__title">Near Earth Objects</router-link>
-        
-     </section>
+      </section>
+
    </div>
  </div>
 </template>
 
 <script>
-// import { gsap } from 'gsap'
+import { gsap } from 'gsap'
 // import each from 'lodash/each'
 export default {
   name: 'Home',
   data() {
     return {
+     imageState:"",
      image:"",
-     alt:""
+     alt:"",
+     showImg: false,
+     imgUrl: ""
     };
   },
   created() {
@@ -36,6 +40,15 @@ export default {
 
   },
   mounted() {
+    this.img = new Image();
+
+    this.img.onload = () => {
+      console.log('img loaded');
+      this.imgUrl = this.img.src;
+      this.showImg = true;
+    }
+    this.img.src = ['../assets/bottom.png', '../assets/KvK_VI-05.png', '../assets/nasa-jpl-neo-1.png'];
+  
     // this.ref = this.$refs.title
     // this.elements = document.querySelectorAll('.home__project__title span')
     // this.titleSpan = document.querySelectorAll(".home__project__title");
@@ -50,20 +63,20 @@ export default {
     // // })
     // this.titles = document.querySelectorAll('.home__project__title')
 
-    // gsap.utils.toArray(".home__project__title").forEach(title => {
-  
-    //   this.tl = gsap.timeline({ paused: true });
+    gsap.utils.toArray(".home__project__title").forEach(title => {
+      console.log(title)
+      this.tl = gsap.timeline({ paused: true });
       
-    //   this.tl.to(".home__project__title", { 
-    //   opacity: 0,
-    //     duration: .5, 
-    //     ease: "power4.out"
-    //   })
+      this.tl.to(".home__project__title", { 
+      opacity: 1,
+        duration: .5, 
+        ease: "power4.out"
+      })
 
       
-    //   title.addEventListener("mouseover", () => this.tl.play() );
-    //   title.addEventListener("mouseout", () => this.tl.reverse() );
-    // });
+      title.addEventListener("mouseover", () => this.tl.play() );
+      title.addEventListener("mouseout", () => this.tl.reverse() );
+    });
     // this.tl = gsap.timeline({paused:true})
     // this.fade = this.tl.to(".home__project__title", { 
     //   opacity: 0,
@@ -75,15 +88,15 @@ export default {
     titleOver(event) {
       console.log(event.path[0].innerHTML)
       if (event.path[0].innerHTML == "A Decade of Loud Music") {
-        this.image = require('../assets/bottom.png')
+        this.imgUrl = this.img.src[0]
         this.alt = event.path[0].innerHTML
       }
       if (event.path[0].innerHTML == "Karpov vs. Korchnoi") {
-        this.image = require('../assets/KvK_VI-05.png')
+        this.imgUrl = this.img.src[1]
         this.alt = event.path[0].innerHTML
       }
       if (event.path[0].innerHTML == "Near Earth Objects") {
-        this.image = require('../assets/nasa-jpl-neo-1.png')
+         this.imgUrl = this.img.src[2]
         this.alt = event.path[0].innerHTML
       }
       console.log(this.image)
