@@ -33,7 +33,7 @@
           music" complaint data as a series of concentric rings of varying
           thicknesses made to resemble a vinyl record, speaker, or sound wave.
           The width of each ring is determined by the count for each month and a
-          tooltip allows the user to hover over each of these to reveal the
+          tool tip allows the user to hover over each of these to reveal the
           total number of complaints for the month.
           </p>
         </div>
@@ -44,6 +44,7 @@
             src="../assets/top.png"
           />
         </figure>
+        <p class="project__footnote">Top of page</p>
         <p class="project__text">
           Given the lighter subject matter, I took this as an opportunity to celebrate the formal quality of the data when plotted in such a way. The result is a zine-like graphic treatment of the content and layout. 
         </p>
@@ -51,18 +52,13 @@
           <div class="project__hero__ui">&bull; &bull; &bull;</div>
           <img class="project__hero__image" src="../assets/tooltip.png" />
         </figure>
+        <p class="project__footnote">Interactive tool tip</p>
         <p class="project__text">
           The data was gathered from roughly 25 million 311 call records stored
-          in NYC Open Data's Socrata database. The majority of the work was done
+          in NYC Open Data's Socrata database. The majority of the analysis was done
           in the query itself by stringing together a series of SoQL clauses to
           extract the complaint type, and then count and group by month and&nbsp;year.
         </p>
-        <!-- <p class="project__text">
-          $select=date_extract_y(created_date) as year,<br>
-          date_extract_m(created_date) as month,<br>
-          descriptor='Loud Music/Party',<br>
-          count(*)&$group=year, month,<br>
-          descriptor='Loud Music/Party</p> -->
       </section>
     </div>
   </div>

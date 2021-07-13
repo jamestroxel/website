@@ -37,9 +37,9 @@
                 />
             </figure>
             <p  class="project__text">
-            James has established a career filling many roles within the field of communication arts, whether it be print-making, presentation design, art direction or data visualization.</p>
+            James has established a unique position within the creative field that brings together a broad array of highly refined skillsets that include commercial print-production, book-binding, graphic design, art direction, web development and data visualization.</p>
             <p class="project__text">
-            He studied painting at The School of Visual Arts, earning his BFA there in 2009 and earned a Master of Science degree in Data Visualization from Parsons School of Design in 2021.</p>
+            He studied painting at The School of Visual Arts, earning his BFA there in 2009, and earned a Master of Science degree in Data Visualization from Parsons School of Design in 2021.</p>
         </section>
     </div>
   </div>

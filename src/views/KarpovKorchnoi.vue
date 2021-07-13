@@ -5,22 +5,24 @@
         <h1 class="kvk__project__title">
           <span>Karpov</span><br /><span>vs.</span><br /><span>Korchnoi</span>
         </h1>
-          <p class="project__feature__text__title">Tools <span class="project__feature__tool">Chessboardjs</span><span class="project__feature__tool">D3</span><span class="project__feature__tool">R</span><span class="project__feature__tool">Vue</span></p>
-              <div class='project__launch__wrapper'>
-        <a
-          class="project__launch__back"
-          >Launch Project</a
-        >
-        <a
-          @mouseover="buttonOver"
-          @mouseout="buttonOut"
-          @mousedown="buttonDown"
-          @mouseup="buttonUp"
-          class="project__launch__front"
-          href="https://jamestroxel.github.io/karpovkorchnoi/"
-          target="_blank"
-          >Launch Project</a
-        >
+        <p class="project__feature__text__title">
+          Tools <span class="project__feature__tool">Chessboardjs</span
+          ><span class="project__feature__tool">D3</span
+          ><span class="project__feature__tool">R</span
+          ><span class="project__feature__tool">Vue</span>
+        </p>
+        <div class="project__launch__wrapper">
+          <a class="project__launch__back">Launch Project</a>
+          <a
+            @mouseover="buttonOver"
+            @mouseout="buttonOut"
+            @mousedown="buttonDown"
+            @mouseup="buttonUp"
+            class="project__launch__front"
+            href="https://jamestroxel.github.io/karpovkorchnoi/"
+            target="_blank"
+            >Launch Project</a
+          >
         </div>
         <div class="features__wrapper">
           <!-- <p class="project__feature__text__title">Tools</p>
@@ -28,22 +30,24 @@
         </div>
       </div>
       <section class="project__details">
-         <div class="project__title__view__wrapper">
-        <p class="project__title__view__label"> Scroll down to read more <span class="arrow">&darr;</span></p>
+        <div class="project__title__view__wrapper">
+          <p class="project__title__view__label">
+            Scroll down to read more <span class="arrow">&darr;</span>
+          </p>
           <p class="project__title__view">
-          Anatoly Karpov and Viktor Korchnoi often found one another sitting on
-          opposite ends of a chessboard throughout the 1970’s. But the contrast
-          between their 1974 Candidates Final and 1978 World Chess Championship
-          could hardly be sharper. One has come to be regarded as a modern
-          classic in tactics, strategy, and chess brilliance between two of the
-          game’s best. The other quickly earned notoriety as an example of the
-          type of superstition, paranoia, and scandal commonly observed in chess
-          lore throughout the game’s rich history. However, a few key
-          similarities will emerge as the focus of this visualization project
-          that also carry broad implications for the way we extract meaning from
-          information. Are there parallels to be drawn between the pressures
-          experienced by a grandmaster-level chess player and those experienced
-          in our own “misinformation” age?
+            Anatoly Karpov and Viktor Korchnoi often found one another sitting
+            on opposite ends of a chessboard throughout the 1970’s. But the
+            contrast between their 1974 Candidates Final and 1978 World Chess
+            Championship could hardly be sharper. One has come to be regarded as
+            a modern classic in tactics, strategy, and chess brilliance between
+            two of the game’s best. The other quickly earned notoriety as an
+            example of the type of superstition, paranoia, and scandal commonly
+            observed in chess lore throughout the game’s rich history. However,
+            a few key similarities will emerge as the focus of this
+            visualization project that also carry broad implications for the way
+            we extract meaning from information. Are there parallels to be drawn
+            between the pressures experienced by a grandmaster-level chess
+            player and those experienced in our own “misinformation” age?
           </p>
         </div>
         <figure id="teaserTrigger" class="project__hero">
@@ -100,7 +104,10 @@
         </p>
         <figure class="project__hero">
           <div class="project__hero__ui">&bull; &bull; &bull;</div>
-          <img class="project__hero__image" src="../assets/karpov-korchnoi-small-1.png" />
+          <img
+            class="project__hero__image"
+            src="../assets/karpov-korchnoi-small-1.png"
+          />
         </figure>
         <p class="project__text">
           The visualizations that accompany the game analysis are designed to
@@ -110,8 +117,73 @@
         </p>
         <figure class="project__hero">
           <div class="project__hero__ui">&bull; &bull; &bull;</div>
-          <img class="project__hero__image" src="../assets/karpov-korchnoi-small-2.png" />
+          <img
+            class="project__hero__image"
+            src="../assets/karpov-korchnoi-small-2.png"
+          />
         </figure>
+        <h1 class="project__heading">Methodology</h1>
+        <p class="project__text">
+          The data collected for this story ranges from textual data gathered
+          from multiple first-hand, written accounts, to quantitative statistics
+          found in game databases and academic research papers. But one thing I
+          was struck by was the amount of available qualitative documentation of
+          the 1978 World Chess Championship, versus the amount of quantitative
+          data used to describe the 1974 match. While it is true that
+          qualitative and quantitative data exist for both events, no one, to my
+          knowledge, was as concerned about who was in the audience, what the
+          weather was like, or what each player ate in the 1974 match, as they
+          were in the 1978 tournament.
+        </p>
+        <figure class="project__hero">
+          <div class="project__hero__ui">&bull; &bull; &bull;</div>
+          <img class="project__hero__image" src="../assets/KvK_VI-03.png" />
+        </figure>
+        <p class="project__text">
+          Conversely, while there are game analyses of the 1978 match, these are
+          not nearly as common as the amount of books that cover game two of the
+          1974 Candidates Final, and are presented as if more for the sake of
+          posterity than to convey anything particularly revelatory. Embracing
+          this fact by limiting the analysis of the 1978 match to mostly
+          qualitative data, and the 1974 match to quantitative data, helped to
+          underscore just how different these two matches were, as well as to
+          support Sigman’s claim that chess, in its ideal state, functions
+          within a vacuum, ignorant of any factors beyond the current board
+          position.
+        </p>
+        <figure class="project__hero">
+          <div class="project__hero__ui">&bull; &bull; &bull;</div>
+          <img class="project__hero__image" src="../assets/KvK_VI-01.png" />
+        </figure>
+        <h1 class="project__heading">Design Rationale</h1>
+        <p class="project__text">
+          The design approach went through many iterations and took inspiration
+          from a number of sources including Constructivist design, the work of
+          Hans Rudolf Bosshard, and various references found in the book, “A New
+          Childhood, Picture Books from Soviet Russia.” The overall look and
+          feel aimed to capture the spirit of the Soviet brand in the 70s and
+          could best be described as an odd mix of pragmatism and idealism. For example, I designed the
+          chessboard to resemble one you would find in a 1978 issue of 64, and
+          modeled the pieces to look as if they were reproductions made from
+          several previous reproductions out of shear thrift. Univers was an
+          obvious font choice due to its, grotesk, Modernist look and feel, and the way
+          that its bold, condensed style mimicked the letterforms visible in the
+          signage found in much of the documentation from 1978.
+        </p>
+        <p class="project__text">
+          The logotype itself is a type study of the name plaques seen on the
+          side of the chess table in Baguio. The skew is intended to reinforce
+          the spacial reference as well as to say, quite literally, that
+          something is slightly askew here. The use of this visual echo was a
+          subliminal nod to the subject of pattern recognition that I utilized
+          in other details as well. The bamboo paneling of Karpov’s chair mimics
+          the diagonal stripe pattern seen in the chessboard and other elements.
+          The photo of a bearded, be-turbaned Steven Dwyer teaching Viktor
+          Korchnoi yoga prefigures a visual of the original Mechanical Turk that
+          immediately follows. It is not a coincidence that the diagram
+          visualizing the seating positions of parapsychologists resembles the
+          chessboard in more than one way.
+        </p>
         <p class="project__text">
           While reading this bizarre story in today’s exhausting, 24-hour,
           280-character media landscape, it is worth asking; Are we under the
@@ -119,19 +191,13 @@
           do chess prodigies respond to this pressure and what are the possible
           outcomes?
         </p>
-        <figure class="project__hero">
-          <div class="project__hero__ui">&bull; &bull; &bull;</div>
-          <img class="project__hero__image" src="../assets/KvK_VI-03.png" />
-        </figure>
-      <h1 class="project__heading">Methodology</h1>
-      <p class="project__text">The data collected for this story ranges from textual data gathered from multiple first-hand, written accounts, to quantitative statistics found in game databases and academic research papers. But one thing I was struck by was the amount of available qualitative documentation of the 1978 World Chess Championship, versus the amount of quantitative data used to describe the 1974 match. While it is true that qualitative and quantitative data exist for both events, no one, to my knowledge, was as concerned about who was in the audience, what the weather was like, or what each player ate in the 1974 match, as they were in the 1978 tournament. Conversely, while there are game analyses of the 1978 match, these are not nearly as common as the amount of books that cover game two of the 1974 Candidates Final, and are presented as if more for the sake of posterity than to convey anything particularly revelatory. Embracing this fact by limiting the analysis of the 1978 match to mostly qualitative data, and the 1974 match to quantitative data, helped to underscore just how different these two matches were, as well as to support Sigman’s claim that chess, in its ideal state, functions within a vacuum, ignorant of any factors beyond the current board position.</p>
       </section>
     </div>
   </div>
 </template>
 
 <script>
-import { gsap, Back } from 'gsap'
+import { gsap, Back } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -141,74 +207,78 @@ export default {
   data() {
     return {};
   },
-  mounted: function () {
-    this.titleView  = gsap.timeline({
+  mounted: function() {
+    this.titleView = gsap.timeline({
       scrollTrigger: {
-        trigger: '#teaserTrigger',
+        trigger: "#teaserTrigger",
         start: "top 100%",
-        toggleAction: "play restart none none" ,
+        toggleAction: "play restart none none",
         markers: false,
-        scrub: 1
-        }
+        scrub: 1,
+      },
     });
-    this.titleFade = this.titleView.to('.project__title__view__wrapper', { 
-        opacity: 0, 
-        // delay: .35,
-        duration: .35, 
-        ease: 'expo.out' 
+    this.titleFade = this.titleView.to(".project__title__view__wrapper", {
+      opacity: 0,
+      // delay: .35,
+      duration: 0.35,
+      ease: "expo.out",
     });
-     this.arrow = gsap.timeline().to(".arrow", 0.5, {
-        y: 5,
-        repeat: -1,
-        ease: Back.easeOut,
-        yoyoEase: Back.easeOut,
+    this.arrow = gsap.timeline().to(".arrow", 0.5, {
+      y: 5,
+      repeat: -1,
+      ease: Back.easeOut,
+      yoyoEase: Back.easeOut,
     });
-    
   },
   methods: {
-        buttonOver() {
-      const tl = gsap.timeline()
-      tl.to('.project__launch__front', { 
-          top: "-.25rem", 
-          left:"-.3rem",
-          duration: .3, 
-          ease: Back.easeOut.config(4)
-      })
-        .to('.project__launch__back', {
-          background: 'black'
-        }, '<-=0.35')
+    buttonOver() {
+      const tl = gsap.timeline();
+      tl.to(".project__launch__front", {
+        top: "-.25rem",
+        left: "-.3rem",
+        duration: 0.3,
+        ease: Back.easeOut.config(4),
+      }).to(
+        ".project__launch__back",
+        {
+          background: "black",
+        },
+        "<-=0.35"
+      );
     },
     buttonOut() {
-      const tl = gsap.timeline()
-      tl.to('.project__launch__front', { 
-          top: 0, 
-          left:0,
-          duration: .3, 
-          ease: Back.easeOut.config(4) 
-      })
-        .to('.project__launch__back', {
-            background: 'white'
-          }, '<-=0.3')
+      const tl = gsap.timeline();
+      tl.to(".project__launch__front", {
+        top: 0,
+        left: 0,
+        duration: 0.3,
+        ease: Back.easeOut.config(4),
+      }).to(
+        ".project__launch__back",
+        {
+          background: "white",
+        },
+        "<-=0.3"
+      );
     },
     buttonDown() {
-      const tl = gsap.timeline()
-      tl.to('.project__launch__front', { 
-          top: '.45rem', 
-          left:'.5rem',
-          duration: .3, 
-          ease: 'expo.out' 
+      const tl = gsap.timeline();
+      tl.to(".project__launch__front", {
+        top: ".45rem",
+        left: ".5rem",
+        duration: 0.3,
+        ease: "expo.out",
       });
     },
-      buttonUp() {
-      const tl = gsap.timeline()
-      tl.to('.project__launch__front', { 
-          top: 0, 
-          left:0,
-          duration: .3, 
-          ease: Back.easeOut.config(4)
+    buttonUp() {
+      const tl = gsap.timeline();
+      tl.to(".project__launch__front", {
+        top: 0,
+        left: 0,
+        duration: 0.3,
+        ease: Back.easeOut.config(4),
       });
     },
-  
   },
 };
 </script>

@@ -85,14 +85,6 @@
         // transition: top ease-in 400ms ;
         z-index: 1;
 }
-// .project__launch__front:hover {
-//     background-color: black;
-//     color: white;
-// }
-// .project__launch__front:hover {
-//     top: .45rem;
-// }
-
 .project__launch__back{
     @extend %description-14;
     background-color: white;
@@ -141,7 +133,7 @@
 .project__heading {
     @extend %title-20;
    
-    margin: 2.5rem 20rem 0rem 20rem ;
+    margin: 2.5rem 20rem 2.5rem 20rem ;
 
     // position: absolute;
 
@@ -157,7 +149,7 @@
 .project__text {
     @extend %description-14;
    
-    margin: 2.5rem 20rem 2.5rem 20rem ;
+    margin: 0rem 20rem 2.5rem 20rem ;
 
     // position: absolute;
 
@@ -233,6 +225,7 @@
 .project__footnote {
     width: 100%;
     text-align: right;
+    margin-bottom:2.5rem;
 }
 .project__legend__image {
     @extend %cover;

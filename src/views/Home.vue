@@ -35,7 +35,7 @@ export default {
      showImg: true,
      imgUrl: "",
      loaded: false,
-     images: [decade, kvk, asteroids]
+     images: [decade, kvk, asteroids], 
     };
   },
   created() {
@@ -45,14 +45,14 @@ export default {
   },
   mounted() {
     this.img = new Image();
-
     this.img.onload = () => {
       console.log('img loaded');
       console.log( this.imgUrl);
       this.imgUrl = this.img.src;
       this.showImg = true
+      this.img.src = "";
     }
-    this.img.src = this.images;
+
   
     // this.ref = this.$refs.title
     // this.elements = document.querySelectorAll('.home__project__title span')
@@ -67,27 +67,35 @@ export default {
     // //   })
     // // })
     // this.titles = document.querySelectorAll('.home__project__title')
+    this.targets = gsap.utils.toArray(".home__project__title")
+    // this.targets.forEach(title => {
 
-    gsap.utils.toArray(".home__project__title").forEach(title => {
-      console.log(title)
-      this.tl = gsap.timeline({ paused: true });
+    //   this.tl = gsap.timeline({ paused: true });
       
-      this.tl.to(".home__project__title", { 
-      opacity: 1,
-        duration: .5, 
-        ease: "power4.out"
-      })
-
-      
-      title.addEventListener("mouseover", () => this.tl.play() );
-      title.addEventListener("mouseout", () => this.tl.reverse() );
-    });
-    // this.tl = gsap.timeline({paused:true})
-    // this.fade = this.tl.to(".home__project__title", { 
+    //   this.tl.to( this.targets, { 
     //   opacity: 0,
     //     duration: .5, 
     //     ease: "power4.out"
     //   })
+    //   this.tl.to(title.target, { 
+    //   opacity: 1,
+    //     duration: .5, 
+    //     ease: "power4.out",
+    //     overwrite: true
+    //   })
+     
+      
+    //   title.addEventListener("mouseover", () => this.tl.play() );
+    //   title.addEventListener("mouseout", () => this.tl.reverse() );
+    // });
+    // console.log(this.targets)
+    this.tl = gsap.timeline({paused:true})
+    this.fade = this.tl.to(this.targets, { 
+      opacity: 0,
+        duration: .5, 
+        ease: "power4.out"
+      })
+      console.log(this.targets.target)
   },
   methods: {
     titleOver(event) {
@@ -104,9 +112,9 @@ export default {
          this.img.src = this.images[2]
         this.alt = event.path[0].innerHTML
       }
-      console.log(this.image)
+
+      
       this.loaded = true;
-      // this.fade.play();
     },
     titleOut() {
       // this.tl.to(this.$refs.title, { 
@@ -117,8 +125,7 @@ export default {
       // }).reverse();
       this.image = ""
       this.loaded = false;
-      // this.fade.reverse();
-    },
+    }
     // getUrl(){
     //   return this.image
     // }
