@@ -43,7 +43,7 @@
         </figure>
            <p class="project__footnote">Initial view</p>
         <p class="project__text">
-          The project is intended to improve the user experiense of Jet Propuslion Lab's current <a class="link" href="https://ssd.jpl.nasa.gov/sbdb.cgi" target="_blank">Small-Body Database Browser</a>. This is achieved by replacing the very information-heavy, tabular format and seperate orbit browser with a more emersive, small-multiple experience, distilling the information down to the what I perceived to be the most important variables, which are outlined below. 
+          The project is intended to improve the user experiense of Jet Propulsion Lab's current <a class="link" href="https://ssd.jpl.nasa.gov/sbdb.cgi" target="_blank">Small-Body Database Browser</a>. This is achieved by simplifying the very information-heavy, tabular format, with its seperate orbit browser, into a more emersive, small-multiple experience, distilling the information down to what I perceived to be the most important variables, which are outlined below. 
         </p>
          <figure class="project__hero">
           <div class="project__hero__ui">&bull; &bull; &bull;</div>

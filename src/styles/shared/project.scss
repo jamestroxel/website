@@ -130,6 +130,13 @@
 
 
 }
+.project__section__wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    // margin: 100% auto;
+    height: 100vh;
+}
 .project__heading {
     @extend %title-20;
    
@@ -200,6 +207,23 @@
     // width: 100%;
     overflow: hidden;
 }
+.project__hero__portrait {
+    @extend %center;
+    background-color: white;
+    // display: flex;
+    width: 40%;
+// justify-content: center;
+    position: relative;
+    align-self: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 1rem;
+    margin: 2.5rem 0rem 2.5rem 0rem;
+    padding: 2rem 0rem 0rem 0rem;
+    // width: 100%;
+    overflow: hidden;
+}
 .project__hero__ui {
     position:absolute;
     top: .5rem;
@@ -222,10 +246,19 @@
     border-top-width: 2px;
     // margin-right: -0.2rem;
 }
+.project__hero__image__portrait {
+    @extend %cover;
+    @extend %center;
+   
+    border-color: black;
+    border-style: solid;
+    border-top-width: 2px;
+    // margin-right: -0.2rem;
+}
 .project__footnote {
     width: 100%;
-    text-align: right;
-    margin-bottom:2.5rem;
+    // text-align: right;
+    margin: 0rem 20rem 2.5rem 20rem ;
 }
 .project__legend__image {
     @extend %cover;

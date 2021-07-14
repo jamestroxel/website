@@ -80,7 +80,7 @@
 .home__project > * { visibility: visible; }
 /* Brings the child items back in, even though the parent is `hidden` */
 
-.home__project > * { transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms; }
+.home__project > * { transition: opacity .5s linear .5s, transform .5s ease-in-out .5s; }
 /* Makes the fades smooth with a slight delay to prevent jumps as the mouse moves between items */
 
 .home__project:hover > * { opacity:0; transform: scale(0.9); }

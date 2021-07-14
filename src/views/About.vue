@@ -29,17 +29,21 @@
                 <p class="project__title__view__label"> Scroll down to read more <span class="arrow">&darr;</span></p>
                 <p class="project__title__view">James Troxel is an experienced, full-stack designer with a specialization in data visualization and an impulse to tell a story.</p>
             </div>
-            <figure id="teaserTrigger" class="project__hero">
-                <div class="project__hero__ui">&bull; &bull; &bull;</div>
-                <img
-                    class="project__hero__image"
-                    src="../assets/GettyImages-535003872.jpg"
-                />
-            </figure>
-            <p  class="project__text">
-            James has established a unique position within the creative field that brings together a broad array of highly refined skillsets that include commercial print-production, book-binding, graphic design, art direction, web development and data visualization.</p>
-            <p class="project__text">
-            He studied painting at The School of Visual Arts, earning his BFA there in 2009, and earned a Master of Science degree in Data Visualization from Parsons School of Design in 2021.</p>
+            <div class="project__section__wrapper">
+              <figure id="teaserTrigger"  class="project__hero__portrait">
+                  <div class="project__hero__ui">&bull; &bull; &bull;</div>
+                  <img
+                      class="project__hero__image__portrait"
+                      src="../assets/DSC_8305_Headshot_1_714x1000.jpg"
+                  />
+              </figure>
+              <div class="about__text__wrapper">
+                <p  class="about__text">
+                James has established a unique position within the creative field that brings together a broad array of highly refined skillsets that include commercial print-production, book-binding, graphic design, art direction, web development and data visualization.</p>
+                <p class="about__text">
+                He studied painting at The School of Visual Arts, earning his BFA there in 2009, and earned a Master of Science degree in Data Visualization from Parsons School of Design in 2021.</p>
+              </div>
+            </div>
         </section>
     </div>
   </div>
@@ -62,7 +66,7 @@ export default {
     this.titleView  = gsap.timeline({
       scrollTrigger: {
         trigger: '#teaserTrigger',
-        start: "top 100%",
+        start: "top bottom",
         toggleAction: "play restart none none" ,
         markers: false,
         scrub: 1

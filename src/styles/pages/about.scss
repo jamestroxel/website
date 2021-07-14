@@ -1,0 +1,26 @@
+.about__text__wrapper {
+    display: flex;
+    flex-direction: column;
+   width: 40%;
+   height:auto;
+    margin: auto 4rem;
+}
+
+.about__text {
+    @extend %description-14;
+//    width: 40%;
+    margin: 0rem 0rem 0rem 0rem;
+
+    // position: absolute;
+    &:nth-child(2) {
+        margin: 4rem 0rem 0rem 0rem;
+    }
+    // p:not(:first-child) {
+    //     margin-top:2.5rem;
+    //     margin-bottom: 2.5rem;
+    // }
+
+    @include media('<=phone') {
+        width: calc(100% - 15rem);
+    }
+}
