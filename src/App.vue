@@ -1,6 +1,8 @@
 <template>
   <Navigation/>
+<transition name="fadeIn">
   <router-view/>
+</transition>
 </template>
 
 <script>

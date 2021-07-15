@@ -1,5 +1,6 @@
 .navigation {
     @extend %cover;
+    @extend %center;
     position: fixed;
     pointer-events: none;
     z-index: z('navigation');
@@ -17,7 +18,6 @@
        &:hover {
            opacity: 0.5;
        }
-   
        @include media('<=phone') {
            left: 5rem;
            top: 5rem;
@@ -54,12 +54,18 @@
         @extend %title-20;
         display: block;
         line-height: 1;
+        @include media('<=phone') {
+            font-size: 2.5rem;
+         }
     }
     .navigation__spinner__wrapper {
-        position: relative;
+        // position: absolute;
+        // top: 0rem;
+        // left: 0rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: visible;
     }
     
     .navigation__spinner {
@@ -82,4 +88,23 @@
             transform-origin: 0 15rem;
         }
     }
- 
+    .monogram__wrapper {
+        width: 100%;
+        display:flex;
+        justify-content: flex-end;
+        position:absolute;
+        // top:0;
+        right: 0;
+        margin: 0rem 0rem;
+        overflow: visible;
+    }
+    .monogram {
+        object-fit:fill;
+        // height: 3rem;
+        // margin: 3rem;
+        overflow: visible;
+        // width: 12rem;
+        height: 4rem;
+        margin: 0rem 0rem 0rem 0rem;
+        transition: opacity 1s linear;
+    }
